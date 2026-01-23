@@ -19,3 +19,6 @@ learning aws through projects
 - Copy file
     - aws s3 cp ./Satya_D_Resume.pdf s3://ashok-firstbucket-cli
 
+
+## Resume from Kubernetes
+- Page 424 in book.
