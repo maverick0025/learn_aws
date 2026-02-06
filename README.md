@@ -22,22 +22,22 @@ learning aws through projects
 
 # EKSCTL
 - install eksctl (google it ) in macos
-    - brew install eksctl
+    - `brew install eksctl`
 - eksctl is a tool to create eks cluster (kubernetes cluster) on AWS. Alternatively, one can use cloud formation to create eks cluster but it's a lot of steps. EKSCTL abstracts all that.
-- eksctl version
+- `eksctl version`
 - install kubectl for macos
-    - brew install kubernetes-cli
-- kubectl version --client
+    - `brew install kubernetes-cli`
+- `kubectl version --client`
 - create eks cluster with free tier
-    - eksctl create cluster --node-type t3.medium --nodes 2
+    - `eksctl create cluster --node-type t3.medium --nodes 2`
     - it creates bunch of stuff like vpc, route table, eks cluter.
 - information on clusters in aws
-    - eksctl get cluster  
+    - `eksctl get cluster`
 - ec2 instances which have been provisioned and up for this cluster
-    - kubectl get nodes
+    - `kubectl get nodes`
 - Can access the same in Elastic Kubernetes service in AWS website.
 - deploy pods replicas , service everthing written inside a single .yaml file
-    - kubectl apply -f <file.yaml>
+    - `kubectl apply -f <file.yaml>`
 - get all running pods (deployments, service, etc)
-    - kubectl get all
+    - `kubectl get all`
 - 
