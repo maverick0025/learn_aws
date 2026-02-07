@@ -46,7 +46,9 @@ learning aws through projects
 - update and install packages in this pod's OS
     - `apt-get update`
     - `apt-get install vim nano` installs both vim and nano editors
-
+- delete service, deployments
+    - `kubectl delete deployment <deployment_name>`
+    - `kubectl delete service <service_name>`
 
 # Docker
 - If I have a docker file, I want to create an image and publish it to docker hub so that I can pull that image whereever I want and run as a container.
@@ -60,7 +62,7 @@ learning aws through projects
     - Create a new repository in docker hub after logging in with credentials.
     - Need to first tag the image and then execute the push command
     - from cli, login to remote docker hub `docker login --username=<user_name>`
-    - Tag the image with docker hub repository `docker tag <Image_id> <username>/<repositoryname>-<optional_new_tag_name>`
+    - Tag the image with docker hub repository `docker tag <Image_id> <username>/<repositoryname>:<optional_new_tag_name>`
     - `docker images` contains our newly tagged image.
     - pushing that tagged image which is present in local machine to docker hub `docker push <image_name>`
 
