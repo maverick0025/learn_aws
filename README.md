@@ -40,4 +40,28 @@ learning aws through projects
     - `kubectl apply -f <file.yaml>`
 - get all running pods (deployments, service, etc)
     - `kubectl get all`
-- 
+- access a pod from terminal
+    - `kubectl exec -it <pod_name> -- /bin/sh`
+    - this is like an OS since each pod is a separate operating system.
+- update and install packages in this pod's OS
+    - `apt-get update`
+    - `apt-get install vim nano` installs both vim and nano editors
+
+
+# Docker
+- If I have a docker file, I want to create an image and publish it to docker hub so that I can pull that image whereever I want and run as a container.
+    - `docker build -t <to_be_generated_container_image_name> .` to run the Docker file in the current directory and to create the container along with all the artifacts (dependent files). `.` means all the artifacts necessary will be in the current directory.
+- `docker images` to see the generated image and other images.
+- Run the docker container image named: custom-httpd
+    - `docker run -d -p 8080:80 custom-httpd` d is to run on Daemon mode so it doesn't take over entire command line. Exposing port 80 of the container to the local host port 8080. It means we forwarded container's port 80 to local port 8080.
+- `docker ps` to see which containers are running in the local
+-  `docker stop <container id>` to stop the container.
+- Pushing an image to docker hub
+    - Create a new repository in docker hub after logging in with credentials.
+    - Need to first tag the image and then execute the push command
+    - from cli, login to remote docker hub `docker login --username=<user_name>`
+    - Tag the image with docker hub repository `docker tag <Image_id> <username>/<repositoryname>-<optional_new_tag_name>`
+    - `docker images` contains our newly tagged image.
+    - pushing that tagged image which is present in local machine to docker hub `docker push <image_name>`
+
+
